@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Seafile search page Injector",
+  "version": "1.0",
+  "description": "seafile search page optimizer",
+  "permissions": ["activeTab", "scripting", "contextMenus"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://192.168.1.17:4001/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
